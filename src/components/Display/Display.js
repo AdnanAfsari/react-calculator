@@ -1,12 +1,11 @@
 import React from 'react';
 
-const display = () => {
+const display = ({ value }) => {
   return (
-    <div>
-      <h1>This is the display components of the calculator</h1>
+    <div className = "display">
+      <div className = "display-value">{ value }</div>
     </div>
   );
-}
-
+};
 
 export default display;

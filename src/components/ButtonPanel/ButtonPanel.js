@@ -4,8 +4,6 @@ import Button from '../Button/Button';
 const buttonPanel = () => {
   return (
     <div>
-      <h1>This is the ButtonPanel component</h1>
-      <h2>These are the buttons</h2>
       <div ClassName = "group-1">
         <Button name = "AC" />
         <Button name = "+/-" />
