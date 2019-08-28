@@ -34,7 +34,6 @@
 .group {
   display: flex;
   height: 120px;
-  background: #F5913E;
   color: #000;
   border-bottom: 1px solid #fff;
 }
