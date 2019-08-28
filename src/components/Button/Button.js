@@ -9,7 +9,7 @@ const button = (props) => {
     width: wide,
   };
   return (
-    <div className="button" style={style}>
+    <div className="button" style={style} >
       <h3>{props.name}</h3>
     </div>
   );

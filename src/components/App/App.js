@@ -9,8 +9,8 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="calc-body">
-            <Display value={"this is display panel"} />
-            <ButtonPanel className="button-panel"/>
+            <Display value='this is display panel' />
+            <ButtonPanel className="button-panel" />
           </div>
 
         </header>
