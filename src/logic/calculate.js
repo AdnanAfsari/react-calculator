@@ -2,46 +2,43 @@ import operate from './operate';
 
 
 const calculate = (dataObj, button) => {
-
   if (button === 'AC') {
     return {
       total: null,
       next: null,
-      operation: null
+      operation: null,
     };
   }
 
-  if ([0,1,2,3,4,5,6,7,8,9].includes(parseInt(button))) {
-    // If button is '0' and the dataObj is '0' as well irrespective of the operation just return empty dataObj
+  if ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9].includes(parseInt(button, 10))) {
     if (button === '0' && dataObj.next === '0') {
-      return {}
+      return {};
     }
     // If there is an operation
     if (dataObj.operation) {
       if (dataObj.next) {
         return {
-          next: dataObj.next + button
-        }
+          next: dataObj.next + button,
+        };
       }
       // if there's no dataObj.next
       return {
-        next: button
-      }
+        next: button,
+      };
     }
 
     // If there is no operation append the button to dataObj.next coming from the state
     if (dataObj.next) {
       return {
         next: dataObj.next + button,
-        total: null
+        total: null,
       };
     }
     // If there's no dataObj.next coming just set the next to the button
     return {
       next: button,
-      total: null
+      total: null,
     };
-
   }
 
 
@@ -51,13 +48,13 @@ const calculate = (dataObj, button) => {
         return {};
       }
       return {
-        next: dataObj.next + button
+        next: dataObj.next + button,
       };
     }
 
     if (dataObj.operation) {
       return {
-        next: '0.'
+        next: '0.',
       };
     }
 
@@ -66,14 +63,12 @@ const calculate = (dataObj, button) => {
         return {};
       }
       return {
-        next: dataObj.total + '.'
+        next: `${dataObj.total}.`,
       };
     }
-
     return {
-      next: '0.'
-    }
-
+      next: '0.',
+    };
   }
 
 
@@ -83,23 +78,22 @@ const calculate = (dataObj, button) => {
       return {
         total: operate(dataObj.total, dataObj.next, dataObj.operation),
         next: null,
-        operation: null
+        operation: null,
       };
-    } else {
-      return {};
     }
+    return {};
   }
 
 
   if (button === '+/-') {
     if (dataObj.next) {
       return {
-        next: (-1 * parseFloat(dataObj.next)).toString()
+        next: (-1 * parseFloat(dataObj.next)).toString(),
       };
     }
     if (dataObj.total) {
       return {
-        total: (-1 * parseFloat(dataObj.total)).toString()
+        total: (-1 * parseFloat(dataObj.total)).toString(),
       };
     }
     return {};
@@ -109,22 +103,19 @@ const calculate = (dataObj, button) => {
   // TAKES CARE OF JUST '%'
   if (button === '%') {
     if (dataObj.operation) {
-        dataObj.total = operate(dataObj.total, dataObj.next, dataObj.operation);
-        dataObj.next = null;
-        dataObj.operation = null;
+      dataObj.total = operate(dataObj.total, dataObj.next, dataObj.operation);
+      dataObj.next = null;
+      dataObj.operation = null;
     }
     if (dataObj.next) {
-        dataObj.total = dataObj.next;
-        dataObj.next = null;
-        dataObj.operation = null;
+      dataObj.total = dataObj.next;
+      dataObj.next = null;
+      dataObj.operation = null;
     }
     return {
-      total: operate(dataObj.total, 100, '%')
-    }
+      total: operate(dataObj.total, 100, '%'),
+    };
   }
-
-
-
 
   // The user hasn't typed a number yet, just save the operation
   if (!dataObj.next) {
@@ -135,10 +126,9 @@ const calculate = (dataObj, button) => {
   return {
     total: dataObj.next,
     next: null,
-    operation: button
-  }
-
-}
+    operation: button,
+  };
+};
 
 
 export default calculate;
