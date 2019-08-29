@@ -27,6 +27,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     default:
+      console.log('Unknown operation');
   }
 };
 
