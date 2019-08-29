@@ -7,11 +7,13 @@ const calculate = (dataObj, button) => {
       total: null,
       next: null,
       operation: null,
+      error: null,
     };
   }
 
   if ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9].includes(parseInt(button, 10))) {
-    if (button === '0' && dataObj.next === '0') {
+    // To prevent typing unnecessary zeros before an integer e.g. 03 instead of simply 3
+    if (button === '0' && dataObj.next === null && dataObj.total === null) {
       return {};
     }
     // If there is an operation
@@ -66,6 +68,7 @@ const calculate = (dataObj, button) => {
         next: `${dataObj.total}.`,
       };
     }
+
     return {
       next: '0.',
     };
@@ -75,13 +78,23 @@ const calculate = (dataObj, button) => {
   // If the '=' is pressed and there is a value in dataObj.next and also an operator
   if (button === '=') {
     if (dataObj.next && dataObj.operation) {
-      return {
-        total: operate(dataObj.total, dataObj.next, dataObj.operation),
-        next: null,
-        operation: null,
-      };
+      try {
+        return {
+          total: operate(dataObj.total, dataObj.next, dataObj.operation),
+          next: null,
+          operation: null,
+        };
+      } catch (e) {
+        return {
+          error: 'Error!! Press AC to reset.',
+          next: null,
+          total: null,
+          operation: null,
+        };
+      }
+    } else {
+      return {};
     }
-    return {};
   }
 
 
@@ -117,6 +130,22 @@ const calculate = (dataObj, button) => {
     };
   }
 
+
+  // To ensure continuity in operation without pressing '='
+  if (dataObj.operation && dataObj.next) {
+    try {
+      dataObj.total = operate(dataObj.total, dataObj.next, dataObj.operation);
+      dataObj.next = null;
+      dataObj.operation = button;
+    } catch (e) {
+      dataObj.error = 'Error!!! Press AC to reset.';
+      dataObj.next = null;
+      dataObj.total = null;
+      dataObj.operation = null;
+    }
+  }
+
+
   // The user hasn't typed a number yet, just save the operation
   if (!dataObj.next) {
     return { operation: button };
@@ -127,6 +156,7 @@ const calculate = (dataObj, button) => {
     total: dataObj.next,
     next: null,
     operation: button,
+    error: null,
   };
 };
 
