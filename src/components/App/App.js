@@ -7,8 +7,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Display value={"this is display panel"} />
-          <ButtonPanel />
+        <header className="App-header">
+          <div className="calc-body">
+            <Display value="this is display panel" />
+            <ButtonPanel className="button-panel" />
+          </div>
+
+        </header>
       </div>
     );
   }
