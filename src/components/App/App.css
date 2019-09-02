@@ -45,7 +45,8 @@
 
 .group {
   display: flex;
-  height: 120px;
+  line-height: 60px;
+  height: 100px;
   color: #000;
   border-bottom: 1px solid #fff;
 }
