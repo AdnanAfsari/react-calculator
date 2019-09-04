@@ -13,16 +13,16 @@ class App extends React.Component {
   }
 
   handleClick = (buttonName) => {
-    this.setState(calculate(this.state, buttonName));
+    this.setState(prevState => calculate(prevState, buttonName));
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <div className = "calc-body">
+          <div className="calc-body">
             <Display value={ this.state.next || this.state.total || this.state.error || '0'} />
-            <ButtonPanel className = "button-panel" clickHandler = {this.handleClick} />
+            <ButtonPanel clickHandler={this.handleClick} />
           </div>
         </header>
       </div>
