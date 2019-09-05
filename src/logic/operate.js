@@ -1,29 +1,29 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  numberOne = new Big(numberOne);
-  numberTwo = new Big(numberTwo);
+  const numberOne1 = new Big(numberOne);
+  const numberTwo2 = new Big(numberTwo);
 
   switch (operation) {
     case '+':
-      return numberOne.plus(numberTwo).toString();
+      return numberOne1.plus(numberTwo2).toString();
 
     case '-':
-      return numberOne.minus(numberTwo).toString();
+      return numberOne1.minus(numberTwo2).toString();
 
     case 'X':
-      return numberOne.times(numberTwo).toString();
+      return numberOne1.times(numberTwo2).toString();
 
 
     case '/':
-      return numberOne.div(numberTwo).toString();
+      return numberOne1.div(numberTwo2).toString();
 
     // SINCE THIS IS FOR CALCULATING PERCENTILE, THE numberTwo is always equal to 100
     case '%':
-      return numberOne.div(numberTwo).toString();
+      return numberOne1.div(numberTwo2).toString();
 
     default:
-      console.log('Unknown operation');
+      return 'Unknown operation';
   }
 };
 

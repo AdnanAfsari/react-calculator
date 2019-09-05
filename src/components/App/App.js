@@ -8,12 +8,12 @@ class App extends React.Component {
   state = {
     total: null,
     next: null,
-    operation: null,
-    error: null
+    // operation: null,
+    error: null,
   }
 
   handleClick = (buttonName) => {
-    this.setState(prevState => calculate(prevState, buttonName));
+    this.setState((prevState) => calculate(prevState, buttonName));
   }
 
   render() {
@@ -21,7 +21,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="calc-body">
-            <Display value={ this.state.next || this.state.total || this.state.error || '0'} />
+            <Display value={this.state.next || this.state.total || this.state.error || '0'} />
             <ButtonPanel clickHandler={this.handleClick} />
           </div>
         </header>
