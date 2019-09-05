@@ -29,6 +29,8 @@
       "react/destructuring-assignment": [0, "never"],
       "react/destructuring-assignment": [0, "never", { "ignoreClassFields": "true" }],
       "react/prop-types": 0,
-      "no-param-reassign": ["error", { "props": false }]
+      "no-param-reassign": ["error", { "props": false }],
+      "import/extensions": "off",
+      "arrow-parens": [2, "as-needed"]
     }
 }

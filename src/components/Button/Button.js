@@ -1,6 +1,6 @@
 import React from 'react';
 
-const button = (props) => {
+const button = props => {
   const { name, clickHandler } = props;
 
   const handleClick = () => clickHandler(name);

@@ -12,8 +12,8 @@ class App extends React.Component {
     error: null,
   }
 
-  handleClick = (buttonName) => {
-    this.setState((prevState) => calculate(prevState, buttonName));
+  handleClick = buttonName => {
+    this.setState(prevState => calculate(prevState, buttonName));
   }
 
   render() {
