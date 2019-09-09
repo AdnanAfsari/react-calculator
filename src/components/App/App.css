@@ -53,4 +53,15 @@
 
 .button {
   cursor: pointer;
+  background: #e0e0e0;
+  width: 25%;
+  border-right: 1px solid #fff;
+}
+
+.r-wide {
+  width: 50%;
+}
+
+.r-btn {
+  background: #f5913e;
 }
