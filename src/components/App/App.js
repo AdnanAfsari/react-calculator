@@ -8,7 +8,7 @@ class App extends React.Component {
   state = {
     total: null,
     next: null,
-    // operation: null,
+    operation: null,
     error: null,
   }
 
@@ -21,7 +21,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="calc-body">
-            <Display value={this.state.next || this.state.total || this.state.error || '0'} />
+            <Display value={this.state.next || this.state.total || this.state.error || '0' || this.state.operation} />
             <ButtonPanel clickHandler={this.handleClick} />
           </div>
         </header>
