@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.calc-body {
+  border: 2px solid #fff;
+  width: 700px;
+  margin: 50px 0;
+}
+
+.display {
+  background: #858693;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+}
+
+.display-value {
+  font-size: 40px;
+  color: white;
+  padding: 8px 8px 0;
+}
+
+.group {
+  display: flex;
+  line-height: 60px;
+  height: 100px;
+  color: #000;
+  border-bottom: 1px solid #fff;
+}
+
+.button {
+  cursor: pointer;
+  background: #e0e0e0;
+  width: 25%;
+  border-right: 1px solid #fff;
+}
+
+.r-wide {
+  width: 50%;
+}
+
+.r-btn {
+  background: #f5913e;
+}
