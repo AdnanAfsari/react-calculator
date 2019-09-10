@@ -1,19 +1,18 @@
 import React from 'react';
 
-const button = (props) => {
+const button = props => {
+  const { name, clickHandler } = props;
 
-  const wide = props.wide ? '50%' : '25%';
+  const handleClick = () => clickHandler(name);
+  const classes = [];
+  if (props.wide) classes.push('wide');
+  if (props.dif) classes.push('btn');
 
-  const style = {
-    background: props.color,
-    width: wide,
-  };
   return (
-    <div className="button" style={style}>
+    <div className={`button r-${classes.join(' ')}`} onClick={handleClick} role="presentation">
       <h3>{props.name}</h3>
     </div>
   );
-}
-
+};
 
 export default button;

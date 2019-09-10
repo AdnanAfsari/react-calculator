@@ -22,23 +22,46 @@
 }
 
 .calc-body {
-  width: 45%;
-  margin-bottom: 100px;
+  border: 2px solid #fff;
+  width: 700px;
+  margin: 50px 0;
 }
 
 .display {
   background: #858693;
-  height: 120px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+}
+
+.display-value {
+  font-size: 40px;
+  color: white;
+  padding: 8px 8px 0;
 }
 
 .group {
   display: flex;
-  height: 120px;
+  line-height: 60px;
+  height: 100px;
   color: #000;
   border-bottom: 1px solid #fff;
 }
 
 .button {
+  cursor: pointer;
+  background: #e0e0e0;
   width: 25%;
   border-right: 1px solid #fff;
+}
+
+.r-wide {
+  width: 50%;
+}
+
+.r-btn {
+  background: #f5913e;
 }

@@ -5,15 +5,25 @@ import ButtonPanel from '../ButtonPanel/ButtonPanel';
 import calculate from '../../logic/calculate';
 
 class App extends React.Component {
+  state = {
+    total: null,
+    next: null,
+    operation: null,
+    error: null,
+  }
+
+  handleClick = buttonName => {
+    this.setState(prevState => calculate(prevState, buttonName));
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <div className="calc-body">
-            <Display value="this is display panel" />
-            <ButtonPanel className="button-panel" />
+            <Display value={this.state.next || this.state.total || this.state.error || '0' || this.state.operation} />
+            <ButtonPanel clickHandler={this.handleClick} />
           </div>
-
         </header>
       </div>
     );
