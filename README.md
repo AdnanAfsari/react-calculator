@@ -2,6 +2,8 @@
 
 This is a React.js Calculator project.
 
+![Calculator](screen_shot.png "calculator")
+
 ## Requirements
 
 - Node.js
