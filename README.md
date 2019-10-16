@@ -1,57 +1,32 @@
-## React calculator
+# React-calculator
 
-This is a online Calculator project built with React.js.
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-![Calculator](screen_shot.png "calculator")
+> Online Calculator. [Live demo](https://calculator-mine.herokuapp.com/)
 
-## Requirements
+## Table of Contents
 
-- Node.js
+- [React-calculator](#React-calculator)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Install](#install)
+  - [Author](#Author)
 
-- React
+## Background
 
-- React-DOM
+#This a online Calculator built with React.js.
 
-- React-Create-App
+## Install
 
-- npm
+- Clone this repo https://github.com/AdnanAfsari/react-calculator
 
-- CSS
+- `cd` to cloned repository folder `react-calculator`
 
-- ES6
+- in terminal run `yarn install` or `npm install`
 
-## Installation
+- Run `npm start` to stat the app in development mode
 
-Visit https://github.com/AdnanAfsari/react-calculator to clone the project `cd` into the project directory and run `npm install`
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-
-## Link to live version hosted on Heroku
-
-[react-calculator live version](https://calculator-mine.herokuapp.com/)
+- Run `npm test` to start the test runner
 
 
 ## Author
