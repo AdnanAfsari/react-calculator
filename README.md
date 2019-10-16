@@ -11,12 +11,29 @@
 - [React-calculator](#React-calculator)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
+  - [Requirements](#requirements)
   - [Install](#install)
-  - [Author](#Author)
+  - [Author](#author)
 
 ## Background
 
-#This a online Calculator built with React.js.
+# This a online Calculator built with React.js.
+
+## Requirements
+
+- Node.js
+
+- React
+
+- React-DOM
+
+- React-Create-App
+
+- npm
+
+- CSS
+
+- ES6
 
 ## Install
 
