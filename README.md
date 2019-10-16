@@ -4,6 +4,8 @@
 
 > Online Calculator. [Live demo](https://calculator-mine.herokuapp.com/)
 
+![Calculator](screen_shot.png "calculator")
+
 ## Table of Contents
 
 - [React-calculator](#React-calculator)
